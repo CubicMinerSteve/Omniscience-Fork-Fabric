@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.thatdudo.omniscience.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "EntityMixin",
+    "ModelPartMixin",
+    "LivingEntityRendererMixin",
+    "MinecraftClientMixin",
+    "ClientPlayerInteractionManagerMixin",
+    "LivingEntityMixin",
+    "ClientWorldMixin",
+    "SheepWoolFeatureRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
