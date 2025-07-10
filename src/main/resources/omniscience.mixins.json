@@ -1,21 +1,22 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "com.thatdudo.omniscience.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ],
-  "client": [
-    "EntityMixin",
-    "ModelPartMixin",
-    "LivingEntityRendererMixin",
-    "MinecraftClientMixin",
-    "ClientPlayerInteractionManagerMixin",
-    "LivingEntityMixin",
-    "ClientWorldMixin",
-    "SheepWoolFeatureRendererMixin"
-  ],
-  "injectors": {
-    "defaultRequire": 1
-  }
+	"required": true,
+	"minVersion": "0.8",
+	"package": "com.thatdudo.omniscience.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+	],
+	"client": [
+		"ClientPlayerInteractionManagerMixin",
+		"ClientWorldMixin",
+		"EntityMixin",
+		"LivingEntityRendererMixin",
+		"MinecraftClientMixin",
+		"ModelPartMixin",
+		"SheepWoolFeatureRendererMixin",
+		"StatusEffectFogModifierMixin",
+		"WorldRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
 }
