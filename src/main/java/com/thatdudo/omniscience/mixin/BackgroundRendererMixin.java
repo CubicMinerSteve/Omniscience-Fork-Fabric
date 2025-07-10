@@ -16,6 +16,7 @@ public class BackgroundRendererMixin {
 
     @Inject(at = @At("HEAD"), method = "getFogModifier", cancellable = true)
     private static void onGetFogModifier(Entity entity, float tickDelta, CallbackInfoReturnable<StatusEffectFogModifier> callbackInfo) {
+        
         if (ConfigManager.getConfig().isEnabled()) {
             if (ConfigManager.getConfig().removeBlindnessEffect) {
                 callbackInfo.setReturnValue(null);

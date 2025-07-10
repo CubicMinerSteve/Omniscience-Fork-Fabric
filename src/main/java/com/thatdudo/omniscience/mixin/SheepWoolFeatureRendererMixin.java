@@ -47,7 +47,7 @@ public class SheepWoolFeatureRendererMixin {
             this.model.animateModel(sheepEntity, f, g, h);
             this.model.setAngles(sheepEntity, f, g, j, k, l);
             VertexConsumer vertexConsumer2 = vertexConsumerProvider.getBuffer(RenderLayer.getItemEntityTranslucentCull(SKIN));
-            this.model.render(matrixStack, vertexConsumer2, i, LivingEntityRenderer.getOverlay(sheepEntity, 0.0f), 1.0f, 1.0f, 1.0f, 0.15f);
+            this.model.render(matrixStack, vertexConsumer2, i, LivingEntityRenderer.getOverlay(sheepEntity, 0.0f), 0x26FFFFFF);
         }
     }
 }

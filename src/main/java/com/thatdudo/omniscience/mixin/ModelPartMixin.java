@@ -11,13 +11,19 @@ import net.minecraft.client.model.ModelPart;
 @Mixin(ModelPart.class)
 public class ModelPartMixin {
 
-    @ModifyVariable(at = @At("HEAD"), method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;IIFFFF)V", ordinal = 3, argsOnly=true)
-    private float onRender(float alpha) {
+    @ModifyVariable(at = @At("HEAD"), method = "Lnet/minecraft/client/model/ModelPart;render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;III)V", ordinal = 2, argsOnly = true)
+    private int onRender(int color) {
         if (ConfigManager.getConfig().isEnabled()) {
-            if (alpha != 1.0f) {
-                return ConfigManager.getConfig().alpha;
+            int alpha = (color >> 24) & 0xFF;
+            if (alpha != 0xFF) {
+                int newAlpha = (int) (ConfigManager.getConfig().alpha * 255);
+                int red = (color >> 16) & 0xFF;
+                int green = (color >> 8) & 0xFF;
+                int blue = color & 0xFF;
+                int newColor = (newAlpha << 24) | (red << 16) | (green << 8) | blue;
+                return newColor;
             }
         }
-        return alpha;
+        return color;
     }
 }
