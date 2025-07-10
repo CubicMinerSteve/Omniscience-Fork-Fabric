@@ -68,7 +68,7 @@ public class ScreenBuilder {
         // all
         BooleanToggleBuilder toggleTargetAll = entryBuilder.startBooleanToggle(Text.translatable("config.generic.targeted.all.title"), config.isGroupTargeted(EntityTargetGroup.ALL))
                 .setDefaultValue(defaults.isGroupTargeted(EntityTargetGroup.ALL))
-//                .setTooltip(Text.translatable("config.generic.targeted.all.tooltip"))
+                //.setTooltip(Text.translatable("config.generic.targeted.all.tooltip"))
                 .setSaveConsumer(n -> config.setEntityTargetGroup(EntityTargetGroup.ALL, n));
 
         // players
