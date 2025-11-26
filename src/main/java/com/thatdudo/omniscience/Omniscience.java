@@ -10,19 +10,23 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.option.KeyBinding.Category;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 
 public class Omniscience implements ClientModInitializer {
 	public static final String MOD_ID = "omniscience";
 	public static final String MOD_NAME = "Omniscience";
 	public static final String CONFIG_FILE_NAME = Omniscience.MOD_ID+".json";
 
+	// The translation key of the keybinding's category.
+	public static final Category OMNISCIENCE = Category.create(Identifier.of("omniscience")); 
+
 	private KeyBinding keyBindingOpenSettings;
 	private KeyBinding keyToggleEnabled;
 	public static boolean isCreative = true;
-
 
 	@Override
 	public void onInitializeClient() {
@@ -34,13 +38,13 @@ public class Omniscience implements ClientModInitializer {
 				"key.omniscience.settings", // The translation key of the keybinding's name
 				InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
 				GLFW.GLFW_KEY_UNKNOWN, // The keycode of the key
-				"key.category.omniscience" // The translation key of the keybinding's category.
+				OMNISCIENCE // The category of this mod.
 		));
 		keyToggleEnabled = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"key.omniscience.enable", // The translation key of the keybinding's name
 				InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
 				GLFW.GLFW_KEY_UNKNOWN, // The keycode of the key
-				"key.category.omniscience" // The translation key of the keybinding's category.
+				OMNISCIENCE // The category of this mod.
 		));
 		ClientTickEvents.END_CLIENT_TICK.register(this::tick);
 	}

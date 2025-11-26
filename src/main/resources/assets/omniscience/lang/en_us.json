@@ -2,7 +2,7 @@
   "message.enabled": "%s enabled",
   "message.disabled": "%s disabled",
 
-  "key.category.omniscience": "Omniscience",
+  "key.category.minecraft.omniscience": "Omniscience",
   "key.omniscience.settings": "Open Settings",
   "key.omniscience.enable": "Toggle Enabled",
 

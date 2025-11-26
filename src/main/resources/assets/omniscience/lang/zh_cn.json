@@ -2,7 +2,7 @@
   "message.enabled": "%s 已启用",
   "message.disabled": "%s 已禁用",
 
-  "key.category.omniscience": "Omniscience",
+  "key.category.minecraft.omniscience": "Omniscience",
   "key.omniscience.settings": "设置菜单",
   "key.omniscience.enable": "切换显示",
 
@@ -29,7 +29,7 @@
 
   "config.generic.misc.title": "其他设置",
   "config.generic.misc.remove_blindness.title": "移除失明效果",
-  "config.generic.misc.remove_blindness.tooltip": "移除失明的黑色迷雾效果",
+  "config.generic.misc.remove_blindness.tooltip": "移除失明的视觉效果",
   "config.generic.misc.expose_barriers.title": "显示屏障方块",
   "config.generic.misc.expose_barriers.tooltip": "无需处在创造模式且手持屏障即可高亮屏障方块",
   "config.generic.misc.name_tags.title": "强制渲染名称",
